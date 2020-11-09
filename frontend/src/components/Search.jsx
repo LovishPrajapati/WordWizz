@@ -16,9 +16,16 @@ const Search = () => {
   });
 
   const styles = {
-    width: "70vh",
+    maxWidth: "60%",
     marginTop: "35vh",
     marginBottom: "2vh",
+  };
+
+  const boxshadow = {
+    maxWidth: "55%",
+    maxHeight: "250px",
+    boxShadow:
+      "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
   };
 
   const getResult = (word) => {
@@ -82,10 +89,7 @@ const Search = () => {
         </div>
       </RubberBand>
       {result.success ? (
-        <div
-          className="card text-center mr-auto ml-auto"
-          style={{ maxWidth: "60vh", maxHeight: "40vh" }}
-        >
+        <div className="card text-center mr-auto ml-auto" style={boxshadow}>
           <div className="card-body" style={{ overflowY: "auto" }}>
             <h5 className="card-title">{result.word}</h5>
             <p className="card-text">
